@@ -426,3 +426,92 @@ section{
 }
 
 }
+
+/* ================= HAMBURGER MENU ================= */
+
+.menu-toggle{
+  display:none;
+  font-size:24px;
+  color:white;
+  cursor:pointer;
+}
+
+/* Desktop Nav */
+nav ul{
+  display:flex;
+  list-style:none;
+}
+
+nav ul li{
+  margin-left:30px;
+}
+
+nav ul li a{
+  color:white;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+nav ul li a:hover{
+  color:var(--primary);
+}
+
+/* ================= MOBILE VERSION ================= */
+
+@media(max-width:900px){
+
+.menu-toggle{
+  display:block;
+}
+
+nav{
+  position:absolute;
+  top:70px;
+  right:0;
+  width:100%;
+  background:#0f172a;
+  display:none;
+}
+
+nav.active{
+  display:block;
+}
+
+nav ul{
+  flex-direction:column;
+  align-items:center;
+  padding:20px 0;
+}
+
+nav ul li{
+  margin:15px 0;
+}
+
+#home{
+  flex-direction:column;
+  text-align:center;
+  gap:40px; /* spacing between text and image */
+}
+
+.hero-text{
+  margin-bottom:20px;
+}
+
+.hero-img{
+  margin-top:20px;
+}
+
+.social-icons{
+  margin-top:30px;   /* space between resume & icons */
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:18px;   /* space between icons */
+}
+
+.social-icons a{
+  width:45px;
+  height:45px;
+}
+
+}
