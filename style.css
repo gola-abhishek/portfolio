@@ -1,0 +1,372 @@
+:root{
+--primary:#6C2BD9;
+--dark:#0f172a;
+--card:#1f2937;
+--light:#f8fafc;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#111827;
+color:white;
+}
+
+section{
+padding:120px 12%;
+}
+
+/* ================= NAVBAR ================= */
+header{
+position:fixed;
+top:0;
+width:100%;
+background:#0f172a;
+padding:18px 12%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+}
+
+.logo{
+font-weight:700;
+font-size:22px;
+color:var(--primary);
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:30px;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:var(--primary);
+}
+
+/* ================= HOME ================= */
+#home{
+display:flex;
+align-items:center;
+justify-content:space-between;
+min-height:100vh;
+flex-wrap:wrap;
+}
+
+/* Resume Button */
+.resume-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:12px 28px;
+  margin-bottom: 10px;
+  background:linear-gradient(135deg,#6C2BD9,#8B5CF6);
+  color:white;
+  text-decoration:none;
+  border-radius:25px;
+  font-weight:600;
+  transition:0.3s ease;
+  box-shadow:0 6px 15px rgba(108,43,217,0.4);
+}
+
+.resume-btn i{
+  font-size:16px;
+}
+
+.resume-btn:hover{
+  transform:translateY(-4px);
+  box-shadow:0 10px 25px rgba(108,43,217,0.6);
+}
+
+.hero-text h1{
+font-size:56px;
+margin-bottom:10px;
+}
+
+.hero-text span{
+color:var(--primary);
+}
+
+.hero-text h3{
+font-size:26px;
+color:var(--primary);
+margin-bottom:20px;
+}
+
+.hero-text p{
+font-size:20px;
+margin-bottom:25px;
+}
+
+.hero-img img{
+width:320px;
+height:320px;
+border-radius:50%;
+border:6px solid var(--primary);
+object-fit:cover;
+}
+
+/* Social */
+.social-icons{
+margin-top:15px;
+}
+
+.social-icons a{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+width:45px;
+height:45px;
+margin-right:15px;
+border-radius:50%;
+background:var(--card);
+color:white;
+font-size:18px;
+transition:0.3s;
+}
+
+.social-icons a:hover{
+background:var(--primary);
+transform:translateY(-5px);
+}
+
+/* ================= ABOUT ================= */
+#about{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:60px;
+flex-wrap:nowrap;
+}
+
+.about-img img{
+width:300px;
+border-radius:15px;
+}
+
+.about-text h2{
+font-size:36px;
+color:var(--primary);
+margin-bottom:20px;
+}
+
+.about-text p{
+font-size:18px;
+line-height:1.8;
+}
+
+/* ================= SKILLS ================= */
+
+#skills{
+background:#0f172a;
+padding:120px 10%;
+}
+
+#skills h2{
+text-align:center;
+font-size:38px;
+margin-bottom:60px;
+color:var(--primary);
+}
+
+.category-title{
+margin:60px 0 25px;
+font-size:24px;
+font-weight:600;
+color:#38bdf8;
+}
+
+/* Grid */
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:30px;
+}
+
+/* Flip Card */
+.skill-card{
+perspective:1000px;
+height:200px;
+cursor:pointer;
+border-radius: 20px;
+}
+
+.card-inner{
+position:relative;
+width:100%;
+height:100%;
+transition:transform 0.8s;
+transform-style:preserve-3d;
+}
+
+.skill-card:hover .card-inner{
+transform:rotateY(180deg);
+}
+
+.card-front,
+.card-back{
+position:absolute;
+width:100%;
+height:100%;
+border-radius:18px;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+padding:20px;
+backface-visibility:hidden;
+color:white;
+text-align:center;
+}
+
+.card-front i{
+font-size:45px;
+margin-bottom:15px;
+}
+
+.card-back{
+background:rgba(0,0,0,0.85);
+transform:rotateY(180deg);
+font-size:14px;
+}
+
+/* Hover Shadow */
+.skill-card:hover{
+transform:translateY(-8px);
+}
+
+/* ===== GRADIENT COLORS ===== */
+
+.html { background: linear-gradient(135deg,#e44d26,#f16529); }
+.css { background: linear-gradient(135deg,#264de4,#2965f1); }
+.js { background: linear-gradient(135deg,#f7df1e,#f0db4f); color:black; }
+.java { background: linear-gradient(135deg,#f89820,#e76f00); }
+.python { background: linear-gradient(135deg,#306998,#ffd43b); }
+.sql { background: linear-gradient(135deg,#00758f,#00a4cc); }
+.firebase { background: linear-gradient(135deg,#ff6f00,#ffca28); }
+.jdbc { background: linear-gradient(135deg,#4e73df,#1cc88a); }
+.oop { background: linear-gradient(135deg,#8e44ad,#3498db); }
+.dsa { background: linear-gradient(135deg,#2ecc71,#27ae60); }
+.dbms { background: linear-gradient(135deg,#16a085,#1abc9c); }
+.os { background: linear-gradient(135deg,#34495e,#2c3e50); }
+.cn { background: linear-gradient(135deg,#e67e22,#d35400); }
+.git { background: linear-gradient(135deg,#f1502f,#e94e31); }
+.github { background: linear-gradient(135deg,#24292e,#444); }
+.vscode { background: linear-gradient(135deg,#007acc,#1f9cf0); }
+.android { background: linear-gradient(135deg,#3ddc84,#2bb673); }
+
+/* ================= PROJECTS ================= */
+
+#projects h2{
+font-size:36px;
+margin-bottom:50px;
+color:var(--primary);
+}
+
+.projects-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.project-card{
+background:var(--card);
+padding:25px;
+border-radius:12px;
+transition:0.3s;
+}
+
+.project-card:hover{
+transform:translateY(-6px);
+}
+
+/* ================= CONTACT ================= */
+
+#contact h2{
+font-size:36px;
+margin-bottom:40px;
+color:var(--primary);
+text-align:center;
+}
+
+.contact-container{
+display:flex;
+gap:50px;
+flex-wrap:wrap;
+}
+
+.contact-info{
+flex:1;
+font-size:18px;
+}
+
+.contact-form{
+flex:1;
+min-width:280px;
+}
+
+.contact-form form{
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.contact-form input,
+.contact-form textarea{
+padding:14px;
+border:none;
+border-radius:8px;
+background:var(--card);
+color:white;
+}
+
+.contact-form button{
+padding:14px;
+border:none;
+background:var(--primary);
+color:white;
+border-radius:8px;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+.contact-form button:hover{
+opacity:0.85;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+#home,
+#about{
+flex-direction:column;
+text-align:center;
+}
+
+section{
+padding:100px 6%;
+}
+
+.skill-card{
+height:180px;
+}
+
+}
